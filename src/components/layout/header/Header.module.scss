@@ -1,10 +1,17 @@
-@import '../../../assets/styles/variables';
+@import 'src/assets/styles/variables.scss';
 
-.wrapper {
-	width: $mobile-size;
+.header {
+	padding: 30px;
 	display: flex;
-	margin: 0 auto;
+	align-items: center;
 	justify-content: space-between;
-}
 
-// TODO: Переписать нормально;
+	> button {
+		background-color: transparent;
+		border: none;
+		outline: none;
+		cursor: pointer;
+		font-size: 30px;
+		color: $white-color;
+	}
+}
