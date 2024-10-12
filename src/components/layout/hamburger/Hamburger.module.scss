@@ -1,0 +1,63 @@
+@import 'src/assets/styles/variables.scss';
+@import 'src/assets/styles/animations.scss';
+
+.wrapper {
+	position: relative;
+
+	> button {
+		font-size: 30px;
+	}
+
+	button {
+		background-color: transparent;
+		outline: none;
+		border: none;
+		cursor: pointer;
+
+		svg > path {
+			color: $white-color;
+			font-size: 30px;
+		}
+	}
+
+	.menu {
+		position: absolute;
+		top: calc(100%);
+		right: 10px;
+		background-color: $white-color;
+		padding: 10px 12px;
+		font-size: 14px;
+		box-shadow: $bx-16;
+		border-radius: 10px 0 10px 10px;
+		min-width: 116px;
+		display: none;
+		animation: opacity 0.4;
+		color: $black-color;
+
+		&.show {
+			display: block;
+		}
+
+		> ul {
+			list-style: none;
+
+			a {
+				color: $black-color;
+				text-decoration: none;
+				transition: color 0.2 ease;
+
+				&:hover,
+				&.active {
+					color: $accent-color;
+					margin: 4px 0;
+				}
+			}
+
+			button {
+				&:hover {
+					color: $accent-color;
+				}
+			}
+		}
+	}
+}
